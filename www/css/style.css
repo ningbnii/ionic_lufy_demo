@@ -1,0 +1,11 @@
+/* Empty. Add your own CSS if you like */
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.stop {
+  position: absolute;
+  z-index: 1000;
+}
