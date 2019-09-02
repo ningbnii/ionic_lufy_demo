@@ -35,51 +35,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     // Each state's controller can be found in controllers.js
     $stateProvider
 
-      // setup an abstract state for the tabs directive
-      .state('tab', {
-        url: '/tab',
-        abstract: true,
-        templateUrl: 'templates/tabs.html'
+      .state('index', {
+        url: '/index',
+        templateUrl: 'templates/index.html',
+        controller: 'IndexCtrl'
       })
-
-      // Each tab has its own nav history stack:
-
-      .state('dash', {
-        url: '/dash',
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      .state('image', {
+        url: '/image',
+        templateUrl: 'templates/image.html',
+        controller: 'ImageCtrl'
       })
-
-      .state('tab.chats', {
-        url: '/chats',
-        views: {
-          'tab-chats': {
-            templateUrl: 'templates/tab-chats.html',
-            controller: 'ChatsCtrl'
-          }
-        }
-      })
-      .state('tab.chat-detail', {
-        url: '/chats/:chatId',
-        views: {
-          'tab-chats': {
-            templateUrl: 'templates/chat-detail.html',
-            controller: 'ChatDetailCtrl'
-          }
-        }
-      })
-
-      .state('tab.account', {
-        url: '/account',
-        views: {
-          'tab-account': {
-            templateUrl: 'templates/tab-account.html',
-            controller: 'AccountCtrl'
-          }
-        }
-      });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/dash');
+    $urlRouterProvider.otherwise('/index');
 
   });

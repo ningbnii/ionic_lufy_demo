@@ -1,11 +1,3 @@
-angular.module('starter.controllers', [])
-
-  .controller('IndexCtrl', function($scope, $state, $ionicModal) {
-
-
-
-  })
-
 .controller('ImageCtrl', function($scope) {
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;

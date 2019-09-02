@@ -6,15 +6,19 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var plumber = require('gulp-plumber');
+var order = require('gulp-order');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./scss/*.scss'],
+  controllers: ['www/controllers/*.js'],
+  services: ['www/services/*.js']
 };
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['watch', 'sass', 'concatControllers', 'concatServices']);
 
 gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.app.scss')
+  gulp.src('./scss/*.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(gulp.dest('./www/css/'))
@@ -26,8 +30,28 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
-gulp.task('watch', function() {
+gulp.task('concatControllers', function() {
+  gulp.src('www/controllers/*.js')
+    .pipe(plumber())
+    //.pipe(stripDebug())
+    .pipe(order(['www/controllers/index.js', 'www/controllers/*.js'], { base: '.' }))
+    .pipe(concat('controllers.js'))
+    .pipe(gulp.dest('./www/js/'))
+});
+
+gulp.task('concatServices', function() {
+  gulp.src('www/services/*.js')
+    .pipe(plumber())
+    //.pipe(stripDebug())
+    .pipe(order(['www/services/index.js', 'www/services/*.js'], { base: '.' }))
+    .pipe(concat('services.js'))
+    .pipe(gulp.dest('./www/js/'))
+});
+
+gulp.task('watch', ['sass'], function() {
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.controllers, ['concatControllers']);
+  gulp.watch(paths.services, ['concatServices']);
 });
 
 gulp.task('install', ['git-check'], function() {
