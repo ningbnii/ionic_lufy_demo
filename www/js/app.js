@@ -27,7 +27,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     });
   })
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    $ionicConfigProvider.views.transition('none');
 
     // Ionic uses AngularUI Router which uses the concept of states
     // Learn more here: https://github.com/angular-ui/ui-router
@@ -44,6 +45,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         url: '/image',
         templateUrl: 'templates/image.html',
         controller: 'ImageCtrl'
+      })
+      .state('image2', {
+        url: '/image2',
+        templateUrl: 'templates/image2.html',
+        controller: 'Image2Ctrl'
       })
 
     // if none of the above states are matched, use this as the fallback
