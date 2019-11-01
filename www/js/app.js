@@ -46,10 +46,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/image.html',
         controller: 'ImageCtrl'
       })
-      .state('image2', {
-        url: '/image2',
-        templateUrl: 'templates/image2.html',
-        controller: 'Image2Ctrl'
+      .state('draw', {
+        url: '/draw',
+        templateUrl: 'templates/draw.html',
+        controller: 'DrawCtrl'
+      })
+      .state('drawTriangles', {
+        url: '/drawTriangles',
+        templateUrl: 'templates/drawTriangles.html',
+        controller: 'DrawTrianglesCtrl'
       })
 
     // if none of the above states are matched, use this as the fallback
