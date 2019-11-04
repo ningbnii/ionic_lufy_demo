@@ -1,11 +1,17 @@
-/* Empty. Add your own CSS if you like */
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-.stop {
-  position: absolute;
-  z-index: 1000;
-}
+canvas {
+  width: 100vw;
+  height: 100vh;
+  flex: 1; }
+
+#p-image .control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  #p-image .control .t-begin {
+    color: red; }

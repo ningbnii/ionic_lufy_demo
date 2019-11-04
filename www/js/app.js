@@ -56,6 +56,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/drawTriangles.html',
         controller: 'DrawTrianglesCtrl'
       })
+      .state('animation', {
+        url: '/animation',
+        templateUrl: 'templates/animation.html',
+        controller: 'AnimationCtrl'
+      })
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/index');

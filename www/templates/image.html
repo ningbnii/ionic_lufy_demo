@@ -1,6 +1,13 @@
 <ion-view view-title="加载图片" cache-view="false">
-  <ion-content scroll='false'>
+  <ion-content scroll='false' id="p-image">
     <div id="image"></div>
-    <button class="button" ng-click='goToIndex()'>返回</button>
-  </ion-content>
+    <div class="control">
+      <div>
+        <button class="button" ng-click="hideImage()">div控制canvas对象</button>
+        <button class="button" ng-click='goToIndex()'>返回</button>
+      </div>
+      <div>
+        <p class="t-begin">游戏开始</p>
+      </div>
+    </div>
 </ion-view>

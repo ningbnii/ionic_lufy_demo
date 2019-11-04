@@ -6,6 +6,81 @@ angular.module('starter.controllers', [])
 
   })
 
+.controller('AnimationCtrl', function($scope, $state) {
+  var w = document.body.clientWidth;
+  var h = document.body.clientHeight;
+  LInit(requestAnimationFrame, 'animation', w, h, main);
+
+  var backgroundLayer,player,player2;
+  var walkDown = true;
+  var i=0;
+
+  function main(event) {
+    initBackgroundLayer();
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE,loadBitmapdata);
+    loader.load('img/player.png','bitmapData');
+  }
+
+  function loadBitmapdata(event) {
+    var backLayer = new LSprite();
+    backgroundLayer.addChild(backLayer);
+    var list = LGlobal.divideCoordinate(480,630,3,4);
+    var data = new LBitmapData(event.target,0,0,120,210);
+    player = new LAnimation(backLayer,data,list);
+
+    player.y = -player.bitmap.height;
+    player.x = (w-player.bitmap.width)/2;
+
+    // player2 = player.clone();
+    // player2.setAction(1,0);
+    // player2.y = h;
+    // backLayer.addChild(player2);
+    backLayer.addEventListener(LEvent.ENTER_FRAME,onframe);
+  }
+
+  function onframe(event) {
+    console.log(i++)
+    player.onframe();
+    if(walkDown){
+      if(player.y<h){
+        player.y+=10;
+      }
+    }
+    if(!walkDown){
+      player.y -=10;
+    }
+
+    if(player.y>=h){
+      walkDown = false;
+      player.setAction(1,0);
+    }
+    if(player.y<=-player.bitmap.height){
+      player.setAction(0,0);
+      walkDown = true;
+    }
+
+
+  }
+
+
+  function initBackgroundLayer() {
+    backgroundLayer = new LSprite();
+    addChild(backgroundLayer);
+  }
+
+
+
+
+  $scope.$on('$ionicView.leave', function() {
+    backgroundLayer.removeAllChild();
+  })
+
+  $scope.goToIndex = function() {
+    $state.go('index')
+  }
+})
+
 .controller('DrawCtrl', function($scope, $state) {
 
   var w = document.body.clientWidth;
@@ -177,7 +252,7 @@ angular.module('starter.controllers', [])
 .controller('ImageCtrl', function($scope, $state) {
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
-  var loader, backgroundLayer;
+  var loader, backgroundLayer,layer;
 
   LInit(requestAnimationFrame, 'image', w, h, main);
 
@@ -186,6 +261,13 @@ angular.module('starter.controllers', [])
     loader = new LLoader();
     loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
     loader.load('img/adam.jpg', 'bitmapData');
+
+    // pc端监听键盘事件
+    LEvent.addEventListener(LGlobal.window,LKeyboardEvent.KEY_DOWN,downshow);
+  }
+
+  function downshow(event) {
+    alert(event.keyCode )
   }
 
   function initBackgroundLayer() {
@@ -197,7 +279,7 @@ angular.module('starter.controllers', [])
     var bitmapdata = new LBitmapData(loader.content);
     var bitmap = new LBitmap(bitmapdata);
 
-    var layer = new LSprite();
+    layer = new LSprite();
     backgroundLayer.addChild(layer);
     layer.addChild(bitmap);
 
@@ -209,11 +291,20 @@ angular.module('starter.controllers', [])
     layer.alpha = 0.4;
 
 
-    // layer.addEventListener(LMouseEvent.MOUSE_DOWN, function() {
-    //   $state.go('image2')
-    // })
+    layer.addEventListener(LMouseEvent.MOUSE_DOWN, function() {
+      alert('ok')
+    })
 
 
+
+
+  }
+
+  /**
+   * 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长
+   */
+  $scope.hideImage = function () {
+    layer.visible = !layer.visible;
   }
 
   $scope.$on('$ionicView.leave', function() {
