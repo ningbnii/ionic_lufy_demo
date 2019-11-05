@@ -3,7 +3,10 @@
   var h = document.body.clientHeight;
   var loader, backgroundLayer,layer;
 
-  LInit(requestAnimationFrame, 'image', w, h, main);
+  if(LGlobal.frameRate){
+    clearInterval(LGlobal.frameRate)
+  }
+  LInit(50, 'image', w, h, main);
 
   function main(event) {
     initBackgroundLayer();
@@ -58,6 +61,7 @@
 
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
+    backgroundLayer.removeAllEventListener();
   })
 
   $scope.goToIndex = function() {

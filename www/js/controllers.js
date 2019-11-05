@@ -9,7 +9,12 @@ angular.module('starter.controllers', [])
 .controller('AnimationCtrl', function($scope, $state) {
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
-  LInit(requestAnimationFrame, 'animation', w, h, main);
+  if(LGlobal.frameRate){
+    // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
+    clearInterval(LGlobal.frameRate)
+  }
+
+  LInit(50, 'animation', w, h, main);
 
   var backgroundLayer,player,player2;
   var walkDown = true;
@@ -36,11 +41,10 @@ angular.module('starter.controllers', [])
     // player2.setAction(1,0);
     // player2.y = h;
     // backLayer.addChild(player2);
-    backLayer.addEventListener(LEvent.ENTER_FRAME,onframe);
+    backLayer.addEventListener(LEvent.ENTER_FRAME,onEnterFrame);
   }
 
-  function onframe(event) {
-    console.log(i++)
+  function onEnterFrame(event) {
     player.onframe();
     if(walkDown){
       if(player.y<h){
@@ -74,6 +78,8 @@ angular.module('starter.controllers', [])
 
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
+    backgroundLayer.removeAllEventListener();
+
   })
 
   $scope.goToIndex = function() {
@@ -87,8 +93,11 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
   var loader;
   var backgroundLayer;
-
-  LInit(requestAnimationFrame, 'draw', w, h, main);
+  var i=0;
+  if(LGlobal.frameRate){
+    clearInterval(LGlobal.frameRate)
+  }
+  LInit(50, 'draw', w, h, main);
 
 
   function main(event) {
@@ -126,6 +135,12 @@ angular.module('starter.controllers', [])
     loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
     loader.load('img/adam.jpg', 'bitmapData');
 
+    backgroundLayer.addEventListener(LEvent.ENTER_FRAME,onframe)
+
+  }
+
+  function onframe() {
+
   }
 
   function loadBitmapdata(event) {
@@ -157,6 +172,7 @@ angular.module('starter.controllers', [])
 
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
+    backgroundLayer.removeAllEventListener()
   })
 
 
@@ -171,8 +187,10 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
   var loader;
   var backgroundLayer;
-
-  LInit(requestAnimationFrame, 'drawTriangles', w, h, main);
+  if(LGlobal.frameRate){
+    clearInterval(LGlobal.frameRate)
+  }
+  LInit(50, 'drawTriangles', w, h, main);
 
 
   function main(event) {
@@ -241,6 +259,7 @@ angular.module('starter.controllers', [])
 
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
+    backgroundLayer.removeAllEventListener();
   })
 
 
@@ -254,7 +273,10 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
   var loader, backgroundLayer,layer;
 
-  LInit(requestAnimationFrame, 'image', w, h, main);
+  if(LGlobal.frameRate){
+    clearInterval(LGlobal.frameRate)
+  }
+  LInit(50, 'image', w, h, main);
 
   function main(event) {
     initBackgroundLayer();
@@ -309,6 +331,69 @@ angular.module('starter.controllers', [])
 
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
+    backgroundLayer.removeAllEventListener();
+  })
+
+  $scope.goToIndex = function() {
+    $state.go('index')
+  }
+})
+
+.controller('SwiperCtrl', function($scope, $state) {
+  var mySwiper = new Swiper('.swiper-container', {
+    autoplay: false,//可选选项，自动滑动
+    direction : 'vertical',
+    observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    observeParents:true//修改swiper的父元素时，自动初始化swiper
+  })
+
+  $scope.list = [
+    {
+      id:'slider1',
+      img:'img/adam.jpg',
+    },
+    {
+      id:'slider2',
+      img:'img/ben.png',
+    },
+    {
+      id:'slider3',
+      img:'img/mike.png',
+    }
+  ];
+  console.log($scope.list)
+
+  var w = document.body.clientWidth;
+  var h = document.body.clientHeight;
+  if(LGlobal.frameRate){
+    // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
+    clearInterval(LGlobal.frameRate)
+  }
+
+  LInit(50, 'slider1', w, h, main);
+
+  var backgroundLayer;
+
+
+  function main(event) {
+    initBackgroundLayer();
+    backgroundLayer.graphics.drawRect(0,'',[0,0,w,h],true,'rgba(0,0,0)');
+  }
+
+
+
+  function initBackgroundLayer() {
+    backgroundLayer = new LSprite();
+    addChild(backgroundLayer);
+  }
+
+
+
+
+  $scope.$on('$ionicView.leave', function() {
+    backgroundLayer.removeAllChild();
+    backgroundLayer.removeAllEventListener();
+
   })
 
   $scope.goToIndex = function() {

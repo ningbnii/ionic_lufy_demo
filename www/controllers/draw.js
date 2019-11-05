@@ -4,8 +4,11 @@
   var h = document.body.clientHeight;
   var loader;
   var backgroundLayer;
-
-  LInit(requestAnimationFrame, 'draw', w, h, main);
+  var i=0;
+  if(LGlobal.frameRate){
+    clearInterval(LGlobal.frameRate)
+  }
+  LInit(50, 'draw', w, h, main);
 
 
   function main(event) {
@@ -43,6 +46,12 @@
     loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
     loader.load('img/adam.jpg', 'bitmapData');
 
+    backgroundLayer.addEventListener(LEvent.ENTER_FRAME,onframe)
+
+  }
+
+  function onframe() {
+
   }
 
   function loadBitmapdata(event) {
@@ -74,6 +83,7 @@
 
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
+    backgroundLayer.removeAllEventListener()
   })
 
 
