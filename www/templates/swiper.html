@@ -3,10 +3,12 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide" ng-repeat="data in list">
-          <div id="{{data.id}}"></div>
+          <div class="canvas" id="{{data.id}}"></div>
+          <div class="control">
+            <p>{{data.id}}</p>
+          </div>
         </div>
       </div>
     </div>
-    <button class="button" ng-click='goToIndex()'>返回</button>
   </ion-content>
 </ion-view>

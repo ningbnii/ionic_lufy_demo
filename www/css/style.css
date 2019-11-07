@@ -8,6 +8,12 @@ canvas {
   height: 100vh;
   flex: 1; }
 
+.control {
+  display: flex;
+  position: absolute; }
+  .control p {
+    color: #000; }
+
 #p-image .control {
   display: flex;
   flex-direction: column;

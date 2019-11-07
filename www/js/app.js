@@ -66,6 +66,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/swiper.html',
         controller: 'SwiperCtrl'
       })
+      .state('move', {
+        url: '/move',
+        templateUrl: 'templates/move.html',
+        controller: 'MoveCtrl'
+      })
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/index');
