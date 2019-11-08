@@ -71,6 +71,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/move.html',
         controller: 'MoveCtrl'
       })
+      .state('drawingpad', {
+        url: '/drawingpad',
+        templateUrl: 'templates/drawingpad.html',
+        controller: 'DrawingpadCtrl'
+      })
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/index');

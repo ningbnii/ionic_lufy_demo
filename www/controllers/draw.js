@@ -8,7 +8,7 @@
   if(LGlobal.frameRate){
     clearInterval(LGlobal.frameRate)
   }
-  LInit(50, 'draw', w, h, main);
+  LInit(requestAnimationFrame, 'draw', w, h, main);
 
 
   function main(event) {

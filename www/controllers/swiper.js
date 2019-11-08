@@ -34,7 +34,7 @@ controller('SwiperCtrl', function ($scope, $state,$timeout) {
           // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
           clearInterval(LGlobal.frameRate)
         }
-        LInit(50, $scope.list[this.activeIndex].id, w, h, main);
+        LInit(requestAnimationFrame, $scope.list[this.activeIndex].id, w, h, main);
         color = $scope.list[this.activeIndex].color;
         img =  $scope.list[this.activeIndex].img;
 

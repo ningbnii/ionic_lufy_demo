@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
     clearInterval(LGlobal.frameRate)
   }
 
-  LInit(50, 'animation', w, h, main);
+  LInit(requestAnimationFrame, 'animation', w, h, main);
 
   var backgroundLayer,player,player2;
   var walkDown = true;
@@ -97,7 +97,7 @@ angular.module('starter.controllers', [])
   if(LGlobal.frameRate){
     clearInterval(LGlobal.frameRate)
   }
-  LInit(50, 'draw', w, h, main);
+  LInit(requestAnimationFrame, 'draw', w, h, main);
 
 
   function main(event) {
@@ -181,6 +181,48 @@ angular.module('starter.controllers', [])
   }
 })
 
+.controller('DrawingpadCtrl', function($scope, $state) {
+
+  var w = document.body.clientWidth;
+  var h = document.body.clientHeight;
+  var backgroundLayer;
+  if(LGlobal.frameRate){
+    clearInterval(LGlobal.frameRate)
+  }
+  LInit(50, 'drawingpad', w, h, main);
+
+
+  function main(event) {
+    initBackgroundLayer();
+
+
+
+
+  }
+
+  function onframe() {
+
+  }
+
+
+  function initBackgroundLayer() {
+    backgroundLayer = new LSprite();
+    backgroundLayer.graphics.drawRect(0,'',[0,0,w,h],true,'#fff');
+    addChild(backgroundLayer);
+  }
+
+
+  $scope.$on('$ionicView.leave', function() {
+    backgroundLayer.removeAllChild();
+    backgroundLayer.removeAllEventListener()
+  })
+
+
+  $scope.goToIndex = function() {
+    $state.go('index')
+  }
+})
+
 .controller('DrawTrianglesCtrl', function($scope, $state) {
 
   var w = document.body.clientWidth;
@@ -190,7 +232,7 @@ angular.module('starter.controllers', [])
   if(LGlobal.frameRate){
     clearInterval(LGlobal.frameRate)
   }
-  LInit(50, 'drawTriangles', w, h, main);
+  LInit(requestAnimationFrame, 'drawTriangles', w, h, main);
 
 
   function main(event) {
@@ -276,7 +318,7 @@ angular.module('starter.controllers', [])
   if(LGlobal.frameRate){
     clearInterval(LGlobal.frameRate)
   }
-  LInit(50, 'image', w, h, main);
+  LInit(requestAnimationFrame, 'image', w, h, main);
 
   function main(event) {
     initBackgroundLayer();
@@ -453,7 +495,7 @@ controller('SwiperCtrl', function ($scope, $state,$timeout) {
           // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
           clearInterval(LGlobal.frameRate)
         }
-        LInit(50, $scope.list[this.activeIndex].id, w, h, main);
+        LInit(requestAnimationFrame, $scope.list[this.activeIndex].id, w, h, main);
         color = $scope.list[this.activeIndex].color;
         img =  $scope.list[this.activeIndex].img;
 

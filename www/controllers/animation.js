@@ -6,7 +6,7 @@
     clearInterval(LGlobal.frameRate)
   }
 
-  LInit(50, 'animation', w, h, main);
+  LInit(requestAnimationFrame, 'animation', w, h, main);
 
   var backgroundLayer,player,player2;
   var walkDown = true;

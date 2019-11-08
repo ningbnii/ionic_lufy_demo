@@ -6,7 +6,7 @@
   if(LGlobal.frameRate){
     clearInterval(LGlobal.frameRate)
   }
-  LInit(50, 'image', w, h, main);
+  LInit(requestAnimationFrame, 'image', w, h, main);
 
   function main(event) {
     initBackgroundLayer();

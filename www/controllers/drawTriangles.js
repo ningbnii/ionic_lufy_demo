@@ -7,7 +7,7 @@
   if(LGlobal.frameRate){
     clearInterval(LGlobal.frameRate)
   }
-  LInit(50, 'drawTriangles', w, h, main);
+  LInit(requestAnimationFrame, 'drawTriangles', w, h, main);
 
 
   function main(event) {
