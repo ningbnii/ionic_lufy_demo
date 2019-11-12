@@ -11,10 +11,6 @@
 
   function main(event) {
     initBackgroundLayer();
-
-
-
-
   }
 
   function onframe() {

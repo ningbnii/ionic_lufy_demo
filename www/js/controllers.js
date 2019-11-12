@@ -13,8 +13,8 @@ angular.module('starter.controllers', [])
     // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
     clearInterval(LGlobal.frameRate)
   }
-
-  LInit(requestAnimationFrame, 'animation', w, h, main);
+  clearInterval(LGlobal.frameRate)
+  LInit(10, 'animation', w, h, main);
 
   var backgroundLayer,player,player2;
   var walkDown = true;
@@ -41,10 +41,12 @@ angular.module('starter.controllers', [])
     // player2.setAction(1,0);
     // player2.y = h;
     // backLayer.addChild(player2);
-    backLayer.addEventListener(LEvent.ENTER_FRAME,onEnterFrame);
+    backgroundLayer.addEventListener(LEvent.ENTER_FRAME,onEnterFrame);
   }
 
   function onEnterFrame(event) {
+    console.log(i++);
+    debugger;
     player.onframe();
     if(walkDown){
       if(player.y<h){
@@ -194,10 +196,6 @@ angular.module('starter.controllers', [])
 
   function main(event) {
     initBackgroundLayer();
-
-
-
-
   }
 
   function onframe() {
