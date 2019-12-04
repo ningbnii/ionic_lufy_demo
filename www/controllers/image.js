@@ -1,12 +1,9 @@
 .controller('ImageCtrl', function($scope, $state) {
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
-  var loader, backgroundLayer,layer;
+  var loader, backgroundLayer, layer;
 
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
-  LInit(requestAnimationFrame, 'image', w, h, main);
+  LInit(50, 'image', w, h, main);
 
   function main(event) {
     initBackgroundLayer();
@@ -15,11 +12,11 @@
     loader.load('img/adam.jpg', 'bitmapData');
 
     // pc端监听键盘事件
-    LEvent.addEventListener(LGlobal.window,LKeyboardEvent.KEY_DOWN,downshow);
+    LEvent.addEventListener(LGlobal.window, LKeyboardEvent.KEY_DOWN, downshow);
   }
 
   function downshow(event) {
-    alert(event.keyCode )
+    alert(event.keyCode)
   }
 
   function initBackgroundLayer() {
@@ -55,7 +52,7 @@
   /**
    * 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长
    */
-  $scope.hideImage = function () {
+  $scope.hideImage = function() {
     layer.visible = !layer.visible;
   }
 

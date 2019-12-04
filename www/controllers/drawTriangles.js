@@ -4,10 +4,8 @@
   var h = document.body.clientHeight;
   var loader;
   var backgroundLayer;
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
-  LInit(requestAnimationFrame, 'drawTriangles', w, h, main);
+
+  LInit(50, 'drawTriangles', w, h, main);
 
 
   function main(event) {

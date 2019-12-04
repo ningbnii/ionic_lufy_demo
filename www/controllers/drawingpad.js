@@ -3,9 +3,7 @@
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
   var backgroundLayer;
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
+
   LInit(50, 'drawingpad', w, h, main);
 
 
@@ -20,7 +18,7 @@
 
   function initBackgroundLayer() {
     backgroundLayer = new LSprite();
-    backgroundLayer.graphics.drawRect(0,'',[0,0,w,h],true,'#fff');
+    backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
     addChild(backgroundLayer);
   }
 

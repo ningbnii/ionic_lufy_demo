@@ -3,66 +3,55 @@ angular.module('starter.controllers', [])
   .controller('IndexCtrl', function($scope, $state, $ionicModal) {
 
 
-
   })
 
 .controller('AnimationCtrl', function($scope, $state) {
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
-  if(LGlobal.frameRate){
-    // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
-    clearInterval(LGlobal.frameRate)
-  }
-  clearInterval(LGlobal.frameRate)
-  LInit(10, 'animation', w, h, main);
 
-  var backgroundLayer,player,player2;
+  LInit(requestAnimationFrame, 'animation', w, h, main);
+
+  var backgroundLayer, player, player2;
   var walkDown = true;
-  var i=0;
+  var i = 0;
 
   function main(event) {
     initBackgroundLayer();
     var loader = new LLoader();
-    loader.addEventListener(LEvent.COMPLETE,loadBitmapdata);
-    loader.load('img/player.png','bitmapData');
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
+    loader.load('img/player.png', 'bitmapData');
   }
 
   function loadBitmapdata(event) {
     var backLayer = new LSprite();
     backgroundLayer.addChild(backLayer);
-    var list = LGlobal.divideCoordinate(480,630,3,4);
-    var data = new LBitmapData(event.target,0,0,120,210);
-    player = new LAnimation(backLayer,data,list);
+    var list = LGlobal.divideCoordinate(480, 630, 3, 4);
+    var data = new LBitmapData(event.target, 0, 0, 120, 210);
+    player = new LAnimation(backLayer, data, list);
 
     player.y = -player.bitmap.height;
-    player.x = (w-player.bitmap.width)/2;
+    player.x = (w - player.bitmap.width) / 2;
 
-    // player2 = player.clone();
-    // player2.setAction(1,0);
-    // player2.y = h;
-    // backLayer.addChild(player2);
-    backgroundLayer.addEventListener(LEvent.ENTER_FRAME,onEnterFrame);
+    backgroundLayer.addEventListener(LEvent.ENTER_FRAME, onEnterFrame);
   }
 
   function onEnterFrame(event) {
-    console.log(i++);
-    debugger;
     player.onframe();
-    if(walkDown){
-      if(player.y<h){
-        player.y+=10;
+    if (walkDown) {
+      if (player.y < h) {
+        player.y += 10;
       }
     }
-    if(!walkDown){
-      player.y -=10;
+    if (!walkDown) {
+      player.y -= 10;
     }
 
-    if(player.y>=h){
+    if (player.y >= h) {
       walkDown = false;
-      player.setAction(1,0);
+      player.setAction(1, 0);
     }
-    if(player.y<=-player.bitmap.height){
-      player.setAction(0,0);
+    if (player.y <= -player.bitmap.height) {
+      player.setAction(0, 0);
       walkDown = true;
     }
 
@@ -95,11 +84,9 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
   var loader;
   var backgroundLayer;
-  var i=0;
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
-  LInit(requestAnimationFrame, 'draw', w, h, main);
+  var i = 0;
+
+  LInit(50, 'draw', w, h, main);
 
 
   function main(event) {
@@ -137,7 +124,7 @@ angular.module('starter.controllers', [])
     loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
     loader.load('img/adam.jpg', 'bitmapData');
 
-    backgroundLayer.addEventListener(LEvent.ENTER_FRAME,onframe)
+    backgroundLayer.addEventListener(LEvent.ENTER_FRAME, onframe)
 
   }
 
@@ -188,9 +175,7 @@ angular.module('starter.controllers', [])
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
   var backgroundLayer;
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
+
   LInit(50, 'drawingpad', w, h, main);
 
 
@@ -205,7 +190,7 @@ angular.module('starter.controllers', [])
 
   function initBackgroundLayer() {
     backgroundLayer = new LSprite();
-    backgroundLayer.graphics.drawRect(0,'',[0,0,w,h],true,'#fff');
+    backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
     addChild(backgroundLayer);
   }
 
@@ -227,10 +212,8 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
   var loader;
   var backgroundLayer;
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
-  LInit(requestAnimationFrame, 'drawTriangles', w, h, main);
+
+  LInit(50, 'drawTriangles', w, h, main);
 
 
   function main(event) {
@@ -311,12 +294,9 @@ angular.module('starter.controllers', [])
 .controller('ImageCtrl', function($scope, $state) {
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
-  var loader, backgroundLayer,layer;
+  var loader, backgroundLayer, layer;
 
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
-  LInit(requestAnimationFrame, 'image', w, h, main);
+  LInit(50, 'image', w, h, main);
 
   function main(event) {
     initBackgroundLayer();
@@ -325,11 +305,11 @@ angular.module('starter.controllers', [])
     loader.load('img/adam.jpg', 'bitmapData');
 
     // pc端监听键盘事件
-    LEvent.addEventListener(LGlobal.window,LKeyboardEvent.KEY_DOWN,downshow);
+    LEvent.addEventListener(LGlobal.window, LKeyboardEvent.KEY_DOWN, downshow);
   }
 
   function downshow(event) {
-    alert(event.keyCode )
+    alert(event.keyCode)
   }
 
   function initBackgroundLayer() {
@@ -365,7 +345,7 @@ angular.module('starter.controllers', [])
   /**
    * 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长
    */
-  $scope.hideImage = function () {
+  $scope.hideImage = function() {
     layer.visible = !layer.visible;
   }
 
@@ -382,11 +362,8 @@ angular.module('starter.controllers', [])
 .controller('MoveCtrl', function($scope, $state) {
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
-  var loader, backgroundLayer,layer,tempLocation;
+  var loader, backgroundLayer, layer, tempLocation;
 
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
   LInit(requestAnimationFrame, 'move', w, h, main);
 
   function main(event) {
@@ -401,25 +378,25 @@ angular.module('starter.controllers', [])
 
   function initBackgroundLayer() {
     backgroundLayer = new LSprite();
-    backgroundLayer.graphics.drawRect(0,'',[0,0,w,h],true,'#fff');
+    backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
     addChild(backgroundLayer);
     backgroundLayer.addEventListener(LMouseEvent.MOUSE_DOWN, function(event) {
       tempLocation = {
-        x:event.offsetX,
-        y:event.offsetY
+        x: event.offsetX,
+        y: event.offsetY
       };
     })
-    backgroundLayer.addEventListener(LMouseEvent.MOUSE_MOVE,function (event) {
+    backgroundLayer.addEventListener(LMouseEvent.MOUSE_MOVE, function(event) {
       var tempx = event.offsetX - tempLocation.x;
       var tempy = event.offsetY - tempLocation.y;
       layer.x += tempx;
       layer.y += tempy;
       tempLocation = {
-        x:event.offsetX,
-        y:event.offsetY
+        x: event.offsetX,
+        y: event.offsetY
       };
     })
-    backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP,function (event) {
+    backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP, function(event) {
 
     })
   }
@@ -443,13 +420,14 @@ angular.module('starter.controllers', [])
   /**
    * 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长
    */
-  $scope.hideImage = function () {
+  $scope.hideImage = function() {
     layer.visible = !layer.visible;
   }
 
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
     backgroundLayer.removeAllEventListener();
+
   })
 
   $scope.goToIndex = function() {
@@ -458,34 +436,33 @@ angular.module('starter.controllers', [])
 })
 
 .
-controller('SwiperCtrl', function ($scope, $state,$timeout) {
+controller('SwiperCtrl', function($scope, $state, $timeout) {
 
-  $scope.list = [
-    {
+  $scope.list = [{
       id: 'slider1',
       img: 'img/adam.jpg',
-      color:'rgba(0,0,0)',
+      color: 'rgba(0,0,0)',
     },
     {
       id: 'slider2',
       img: 'img/ben.png',
-      color:'rgba(255,0,0)',
+      color: 'rgba(255,0,0)',
     },
     {
       id: 'slider3',
       img: 'img/mike.png',
-      color:'rgba(255,255,0)',
+      color: 'rgba(255,255,0)',
     }
   ];
   var color = 'rgba(0,0,0)';
   var img = $scope.list[0].img;
   var mySwiper = new Swiper('.swiper-container', {
-    autoplay: false,//可选选项，自动滑动
+    autoplay: false, //可选选项，自动滑动
     direction: 'vertical',
-    observer: true,//修改swiper自己或子元素时，自动初始化swiper
-    observeParents: true,//修改swiper的父元素时，自动初始化swiper
-    on:{
-      slideChange:function () {
+    observer: true, //修改swiper自己或子元素时，自动初始化swiper
+    observeParents: true, //修改swiper的父元素时，自动初始化swiper
+    on: {
+      slideChange: function() {
 
         backgroundLayer.removeAllChild();
         backgroundLayer.removeAllEventListener();
@@ -493,21 +470,21 @@ controller('SwiperCtrl', function ($scope, $state,$timeout) {
           // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
           clearInterval(LGlobal.frameRate)
         }
-        LInit(requestAnimationFrame, $scope.list[this.activeIndex].id, w, h, main);
+        LInit(50, $scope.list[this.activeIndex].id, w, h, main);
         color = $scope.list[this.activeIndex].color;
-        img =  $scope.list[this.activeIndex].img;
+        img = $scope.list[this.activeIndex].img;
 
       },
-      slideNextTransitionStart:function () {
+      slideNextTransitionStart: function() {
         // 从后台搞一个新数据，push到数组中
         $scope.list.push({
           id: 'slider4',
           img: 'img/mike.png',
-          color:'rgba(0,255,0)',
+          color: 'rgba(0,255,0)',
         })
         $scope.$apply();
       },
-      slidePrevTransitionStart:function () {
+      slidePrevTransitionStart: function() {
         // 监听第一个滑动
       }
 
@@ -519,16 +496,16 @@ controller('SwiperCtrl', function ($scope, $state,$timeout) {
   var h = document.body.clientHeight;
 
 
-  $timeout(function () {
+  $timeout(function() {
     if (LGlobal.frameRate) {
       // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
       clearInterval(LGlobal.frameRate)
     }
     LInit(50, 'slider1', w, h, main);
-  },0)
+  }, 0)
 
 
-  var backgroundLayer,loader;
+  var backgroundLayer, loader;
 
 
   function main(event) {
@@ -538,6 +515,7 @@ controller('SwiperCtrl', function ($scope, $state,$timeout) {
     loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
     loader.load(img, 'bitmapData');
   }
+
   function loadBitmapdata(event) {
     var bitmapdata = new LBitmapData(loader.content);
     var bitmap = new LBitmap(bitmapdata);
@@ -561,12 +539,12 @@ controller('SwiperCtrl', function ($scope, $state,$timeout) {
   }
 
 
-  $scope.$on('$ionicView.leave', function () {
+  $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
     backgroundLayer.removeAllEventListener();
   })
 
-  $scope.goToIndex = function () {
+  $scope.goToIndex = function() {
     $state.go('index')
   }
 })

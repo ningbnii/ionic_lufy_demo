@@ -1,11 +1,8 @@
 .controller('MoveCtrl', function($scope, $state) {
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
-  var loader, backgroundLayer,layer,tempLocation;
+  var loader, backgroundLayer, layer, tempLocation;
 
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
   LInit(requestAnimationFrame, 'move', w, h, main);
 
   function main(event) {
@@ -20,25 +17,25 @@
 
   function initBackgroundLayer() {
     backgroundLayer = new LSprite();
-    backgroundLayer.graphics.drawRect(0,'',[0,0,w,h],true,'#fff');
+    backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
     addChild(backgroundLayer);
     backgroundLayer.addEventListener(LMouseEvent.MOUSE_DOWN, function(event) {
       tempLocation = {
-        x:event.offsetX,
-        y:event.offsetY
+        x: event.offsetX,
+        y: event.offsetY
       };
     })
-    backgroundLayer.addEventListener(LMouseEvent.MOUSE_MOVE,function (event) {
+    backgroundLayer.addEventListener(LMouseEvent.MOUSE_MOVE, function(event) {
       var tempx = event.offsetX - tempLocation.x;
       var tempy = event.offsetY - tempLocation.y;
       layer.x += tempx;
       layer.y += tempy;
       tempLocation = {
-        x:event.offsetX,
-        y:event.offsetY
+        x: event.offsetX,
+        y: event.offsetY
       };
     })
-    backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP,function (event) {
+    backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP, function(event) {
 
     })
   }
@@ -62,13 +59,14 @@
   /**
    * 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长
    */
-  $scope.hideImage = function () {
+  $scope.hideImage = function() {
     layer.visible = !layer.visible;
   }
 
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
     backgroundLayer.removeAllEventListener();
+
   })
 
   $scope.goToIndex = function() {

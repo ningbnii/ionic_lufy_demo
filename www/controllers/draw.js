@@ -4,11 +4,9 @@
   var h = document.body.clientHeight;
   var loader;
   var backgroundLayer;
-  var i=0;
-  if(LGlobal.frameRate){
-    clearInterval(LGlobal.frameRate)
-  }
-  LInit(requestAnimationFrame, 'draw', w, h, main);
+  var i = 0;
+
+  LInit(50, 'draw', w, h, main);
 
 
   function main(event) {
@@ -46,7 +44,7 @@
     loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
     loader.load('img/adam.jpg', 'bitmapData');
 
-    backgroundLayer.addEventListener(LEvent.ENTER_FRAME,onframe)
+    backgroundLayer.addEventListener(LEvent.ENTER_FRAME, onframe)
 
   }
 
