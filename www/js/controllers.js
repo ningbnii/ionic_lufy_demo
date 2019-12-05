@@ -179,15 +179,22 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
   var backgroundLayer;
 
-  LInit(50, 'drawingpad', w, h, main);
+
+  LInit(1, 'drawingpad', w, h, main);
 
 
   function main(event) {
     initBackgroundLayer();
+    var drawing = new LSprite();
+    console.log(drawing.getWidth())
+    backgroundLayer.addChild(drawing);
+    drawing.graphics.drawRect(0,'',[0,0,w,h],true,'#fff');
+    drawing.addEventListener(LMouseEvent.MOUSE_DOWN,onMouseDown)
   }
 
-  function onframe() {
-
+  function onMouseDown(e) {
+    console.log(e)
+    // drawing.graphics.moveTo
   }
 
 
