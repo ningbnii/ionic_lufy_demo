@@ -2,7 +2,8 @@
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
 
-  LInit(requestAnimationFrame, 'animation', w, h, main);
+  LInit(100, 'animation', w, h, main);
+  console.log(LGlobal.speed)
 
   var backgroundLayer, player, player2;
   var walkDown = true;
@@ -29,6 +30,8 @@
   }
 
   function onEnterFrame(event) {
+    // console.log(LGlobal.requestIdArr)
+    console.log(LGlobal.requestId)
     player.onframe();
     if (walkDown) {
       if (player.y < h) {
@@ -63,7 +66,7 @@
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
     backgroundLayer.removeAllEventListener();
-
+    // window.cancelAnimationFrame(LGlobal.requestId)
   })
 
   $scope.goToIndex = function() {

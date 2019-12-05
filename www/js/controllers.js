@@ -9,7 +9,8 @@ angular.module('starter.controllers', [])
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
 
-  LInit(requestAnimationFrame, 'animation', w, h, main);
+  LInit(100, 'animation', w, h, main);
+  console.log(LGlobal.speed)
 
   var backgroundLayer, player, player2;
   var walkDown = true;
@@ -36,6 +37,8 @@ angular.module('starter.controllers', [])
   }
 
   function onEnterFrame(event) {
+    // console.log(LGlobal.requestIdArr)
+    console.log(LGlobal.requestId)
     player.onframe();
     if (walkDown) {
       if (player.y < h) {
@@ -70,7 +73,7 @@ angular.module('starter.controllers', [])
   $scope.$on('$ionicView.leave', function() {
     backgroundLayer.removeAllChild();
     backgroundLayer.removeAllEventListener();
-
+    // window.cancelAnimationFrame(LGlobal.requestId)
   })
 
   $scope.goToIndex = function() {
@@ -364,7 +367,7 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
   var loader, backgroundLayer, layer, tempLocation;
 
-  LInit(requestAnimationFrame, 'move', w, h, main);
+  LInit(1, 'move', w, h, main);
 
   function main(event) {
     initBackgroundLayer();
