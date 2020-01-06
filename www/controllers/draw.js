@@ -6,7 +6,7 @@
   var backgroundLayer;
   var i = 0;
 
-  LInit(50, 'draw', w, h, main);
+  LInit(20, 'draw', w, h, main);
 
 
   function main(event) {

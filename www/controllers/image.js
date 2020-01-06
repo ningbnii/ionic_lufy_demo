@@ -3,7 +3,7 @@
   var h = document.body.clientHeight;
   var loader, backgroundLayer, layer;
 
-  LInit(50, 'image', w, h, main);
+  LInit(20, 'image', w, h, main);
 
   function main(event) {
     initBackgroundLayer();

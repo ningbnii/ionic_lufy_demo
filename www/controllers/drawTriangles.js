@@ -5,7 +5,7 @@
   var loader;
   var backgroundLayer;
 
-  LInit(50, 'drawTriangles', w, h, main);
+  LInit(20, 'drawTriangles', w, h, main);
 
 
   function main(event) {
