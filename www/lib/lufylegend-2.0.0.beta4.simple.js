@@ -1730,8 +1730,9 @@ function init(s, c, w, h, f, t) {
                 LGlobal._requestAFBaseTime += s;
                 LGlobal.onShow();
             }
-            window.cancelAnimationFrame(LGlobal.requestId)
-            LGlobal.requestId = _requestAF(loop, s);
+
+            var requestId = _requestAF(loop, s);
+
         };
     }
     if (document.readyState === "complete") {
