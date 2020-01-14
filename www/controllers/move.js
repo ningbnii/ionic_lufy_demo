@@ -2,10 +2,12 @@
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
   var loader, backgroundLayer, layer, tempLocation;
+  var touchPointIdList = [];
 
   LInit(requestAnimationFrame, 'move', w, h, main);
 
   function main(event) {
+    LMultitouch.inputMode = LMultitouchInputMode.TOUCH_POINT;
     initBackgroundLayer();
     loader = new LLoader();
     loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
@@ -20,12 +22,24 @@
     backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
     addChild(backgroundLayer);
     backgroundLayer.addEventListener(LMouseEvent.MOUSE_DOWN, function(event) {
+      var flag = false;
+      for(var i=0;i<touchPointIdList.length;i++){
+        if(touchPointIdList[i].touchPointID == event.touchPointID){
+          flag = true;
+          break;
+        }
+      }
+      if(!flag){
+        touchPointIdList.push(event);
+      }
+
       tempLocation = {
         x: event.offsetX,
         y: event.offsetY
       };
     })
     backgroundLayer.addEventListener(LMouseEvent.MOUSE_MOVE, function(event) {
+      console.log(touchPointIdList.length)
       var tempx = event.offsetX - tempLocation.x;
       var tempy = event.offsetY - tempLocation.y;
       layer.x += tempx;
@@ -35,8 +49,13 @@
         y: event.offsetY
       };
     })
-    backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP, function(event) {
-
+    backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP, function(e) {
+      for (var i=0;i<touchPointIdList.length;i++){
+        if(touchPointIdList[i].touchPointID == e.touchPointID){
+          touchPointIdList.splice(i,1);
+          break;
+        }
+      }
     })
   }
 

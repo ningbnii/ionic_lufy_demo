@@ -16,6 +16,7 @@ controller('DrawingpadCtrl', function ($scope, $state) {
 
 
   function main(event) {
+    LMultitouch.inputMode = LMultitouchInputMode.TOUCH_POINT;
     initBackgroundLayer();
     bitmapdata1 = new LBitmapData(null, 0, 0, w, h, LBitmapData.DATA_CANVAS);
     ctx = bitmapdata1._canvas.getContext('2d');
