@@ -2,7 +2,7 @@
   var w = document.body.clientWidth;
   var h = document.body.clientHeight;
 
-  LInit(20, 'animation', w, h, main);
+  LInit(100, 'animation', w, h, main);
 
   var backgroundLayer, player, player2;
   var walkDown = true;
