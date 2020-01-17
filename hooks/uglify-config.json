@@ -1,36 +1,25 @@
 {
-    "alwaysRun": true,
-    "recursiveFolderSearch": true,
-    "foldersToProcess": [
-        "js",
-        "css",
-        "img",
-        "build"
-    ],
-    "uglifyJsOptions": {
-        "compress": {
-            "drop_console": true
-        },
-        "fromString": true,
-        "mangle": true
+  "alwaysRun": true,
+  "recursiveFolderSearch": true,
+  "foldersToProcess": [
+    "js",
+    "css",
+    "build"
+  ],
+  "uglifyJsOptions":
+  {
+    "compress":
+    {
+      "drop_console": false
     },
-    "cleanCssOptions": {
-        "noAdvanced": true,
-        "keepSpecialComments": 0
-    },
-    "imageminOptions": {
-        "jpeg": {
-            "progressive": true,
-            "arithmetic": false
-        },
-        "png": {
-            "optimizationLevel": 2
-        },
-        "gif": {
-            "interlaced": false
-        },
-        "svg": {
-            "pretty": false
-        }
+    "mangle": false,
+    "output":
+    {
+      "code": true
     }
+  },
+  "cleanCssOptions":
+  {
+    "specialComments": "all"
+  }
 }

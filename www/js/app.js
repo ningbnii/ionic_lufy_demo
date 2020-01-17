@@ -76,11 +76,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/drawingpad.html',
         controller: 'DrawingpadCtrl'
       })
-      .state('download', {
-        url: '/download',
-        templateUrl: 'templates/download.html',
-        controller: 'DownloadCtrl'
-      })
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/index');

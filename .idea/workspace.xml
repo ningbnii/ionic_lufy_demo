@@ -2,11 +2,446 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a19624f1-fb6b-4960-a41f-6d8774a85e2d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/controllers/download.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/PDFPageProxy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/RenderTask.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/display_api.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/doc_helper.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/external-Promise.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Bold-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Bold-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Bold-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-BoldItalic-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-BoldItalic-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-BoldItalic-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Italic-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Italic-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Italic-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Light-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Light-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Light-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-LightItalic-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-LightItalic-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-LightItalic-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Regular-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Regular-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/fonts/OpenSans-Regular-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/module-pdfjsLib-PDFDataRangeTransport.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/module-pdfjsLib-PDFDocumentLoadingTask.PDFDocumentLoadingTask.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/module-pdfjsLib-PDFDocumentProxy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/module-pdfjsLib-PDFWorker.PDFWorker.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/module-pdfjsLib.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/scripts/linenumber.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/scripts/prettify/Apache-License-2.0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/scripts/prettify/lang-css.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/scripts/prettify/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/styles/jsdoc-default.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/styles/prettify-jsdoc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/draft/styles/prettify-tomorrow.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/api/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/build/pdf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/build/pdf.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/build/pdf.worker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/build/pdf.worker.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/examples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/features/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/features/tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/features/worker-stub.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/getting_started/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/images/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/images/logo.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/js/jquery-2.1.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/78-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/78-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/78-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/78-RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/78-RKSJ-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/78-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/78ms-RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/78ms-RKSJ-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/83pv-RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/90ms-RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/90ms-RKSJ-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/90msp-RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/90msp-RKSJ-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/90pv-RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/90pv-RKSJ-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Add-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Add-RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Add-RKSJ-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Add-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-CNS1-0.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-CNS1-1.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-CNS1-2.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-CNS1-3.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-CNS1-4.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-CNS1-5.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-CNS1-6.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-CNS1-UCS2.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-GB1-0.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-GB1-1.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-GB1-2.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-GB1-3.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-GB1-4.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-GB1-5.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-GB1-UCS2.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Japan1-0.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Japan1-1.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Japan1-2.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Japan1-3.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Japan1-4.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Japan1-5.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Japan1-6.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Japan1-UCS2.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Korea1-0.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Korea1-1.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Korea1-2.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Adobe-Korea1-UCS2.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/B5pc-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/B5pc-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/CNS-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/CNS-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/CNS1-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/CNS1-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/CNS2-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/CNS2-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/ETHK-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/ETHK-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/ETen-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/ETen-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/ETenms-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/ETenms-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Ext-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Ext-RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Ext-RKSJ-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Ext-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GB-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GB-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GB-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GB-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBK-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBK-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBK2K-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBK2K-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBKp-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBKp-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBT-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBT-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBT-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBT-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBTpc-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBTpc-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBpc-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/GBpc-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKdla-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKdla-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKdlb-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKdlb-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKgccs-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKgccs-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKm314-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKm314-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKm471-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKm471-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKscs-B5-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/HKscs-B5-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Hankaku.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Hiragana.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSC-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSC-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSC-Johab-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSC-Johab-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSCms-UHC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSCms-UHC-HW-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSCms-UHC-HW-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSCms-UHC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSCpc-EUC-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/KSCpc-EUC-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Katakana.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/NWP-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/NWP-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/RKSJ-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/RKSJ-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/Roman.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniCNS-UCS2-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniCNS-UCS2-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniCNS-UTF16-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniCNS-UTF16-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniCNS-UTF32-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniCNS-UTF32-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniCNS-UTF8-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniCNS-UTF8-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniGB-UCS2-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniGB-UCS2-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniGB-UTF16-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniGB-UTF16-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniGB-UTF32-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniGB-UTF32-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniGB-UTF8-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniGB-UTF8-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UCS2-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UCS2-HW-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UCS2-HW-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UCS2-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UTF16-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UTF16-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UTF32-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UTF32-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UTF8-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS-UTF8-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS2004-UTF16-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS2004-UTF16-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS2004-UTF32-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS2004-UTF32-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS2004-UTF8-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJIS2004-UTF8-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJISPro-UCS2-HW-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJISPro-UCS2-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJISPro-UTF8-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJISX0213-UTF32-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJISX0213-UTF32-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJISX02132004-UTF32-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniJISX02132004-UTF32-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniKS-UCS2-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniKS-UCS2-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniKS-UTF16-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniKS-UTF16-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniKS-UTF32-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniKS-UTF32-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniKS-UTF8-H.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/UniKS-UTF8-V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/V.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/cmaps/WP-Symbol.bcmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/compressed.tracemonkey-pldi-09.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/debugger.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-check.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-comment.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-help.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-insert.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-key.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-newparagraph.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-noicon.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-note.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/annotation-paragraph.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/findbarButton-next-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/findbarButton-next-rtl@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/findbarButton-next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/findbarButton-next@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/findbarButton-previous-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/findbarButton-previous-rtl@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/findbarButton-previous.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/findbarButton-previous@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/grab.cur" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/grabbing.cur" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/loading-icon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/loading-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/loading-small@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-documentProperties.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-documentProperties@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-firstPage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-firstPage@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-handTool.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-handTool@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-lastPage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-lastPage@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-rotateCcw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-rotateCcw@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-rotateCw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-rotateCw@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-scrollHorizontal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-scrollHorizontal@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-scrollVertical.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-scrollVertical@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-scrollWrapped.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-scrollWrapped@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-selectTool.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-selectTool@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-spreadEven.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-spreadEven@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-spreadNone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-spreadNone@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-spreadOdd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/secondaryToolbarButton-spreadOdd@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/texture.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-bookmark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-bookmark@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-download@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-menuArrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-menuArrows@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-openFile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-openFile@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-pageDown-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-pageDown-rtl@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-pageDown.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-pageDown@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-pageUp-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-pageUp-rtl@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-pageUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-pageUp@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-presentationMode.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-presentationMode@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-print.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-print@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-search@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-secondaryToolbarToggle-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-secondaryToolbarToggle-rtl@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-secondaryToolbarToggle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-secondaryToolbarToggle@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-sidebarToggle-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-sidebarToggle-rtl@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-sidebarToggle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-sidebarToggle@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-viewAttachments.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-viewAttachments@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-viewOutline-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-viewOutline-rtl@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-viewOutline.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-viewOutline@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-viewThumbnail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-viewThumbnail@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-zoomIn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-zoomIn@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-zoomOut.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/toolbarButton-zoomOut@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/treeitem-collapsed-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/treeitem-collapsed-rtl@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/treeitem-collapsed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/treeitem-collapsed@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/treeitem-expanded.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/images/treeitem-expanded@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ach/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/af/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/an/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ar/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ast/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/az/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/be/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/bg/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/bn/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/bo/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/br/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/brx/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/bs/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ca/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/cak/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/cs/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/cy/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/da/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/de/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/dsb/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/el/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/en-CA/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/en-GB/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/en-US/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/eo/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/es-AR/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/es-CL/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/es-ES/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/es-MX/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/et/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/eu/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/fa/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ff/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/fi/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/fr/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/fy-NL/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ga-IE/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/gd/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/gl/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/gn/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/gu-IN/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/he/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/hi-IN/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/hr/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/hsb/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/hu/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/hy-AM/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ia/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/id/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/is/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/it/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ja/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ka/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/kab/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/kk/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/km/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/kn/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ko/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/lij/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/lo/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/locale.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/lt/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ltg/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/lv/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/mk/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/mr/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ms/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/my/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/nb-NO/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ne-NP/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/nl/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/nn-NO/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/oc/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/pa-IN/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/pl/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/pt-BR/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/pt-PT/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/rm/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ro/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ru/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/scn/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/si/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/sk/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/sl/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/son/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/sq/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/sr/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/sv-SE/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ta/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/te/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/th/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/tl/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/tr/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/trs/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/uk/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/ur/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/uz/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/vi/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/wo/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/xh/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/zh-CN/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/locale/zh-TW/viewer.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/viewer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/viewer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/viewer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/pdf/web/viewer.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/templates/download.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/controllers/animation.js" afterPath="$PROJECT_DIR$/www/controllers/animation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hooks/after_prepare/uglify.js" afterPath="$PROJECT_DIR$/hooks/after_prepare/uglify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hooks/uglify-config.json" afterPath="$PROJECT_DIR$/hooks/uglify-config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/controllers/move.js" afterPath="$PROJECT_DIR$/www/controllers/move.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/lufylegend-2.0.0.beta4.simple.js" afterPath="$PROJECT_DIR$/www/lib/lufylegend-2.0.0.beta4.simple.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/services.js" afterPath="$PROJECT_DIR$/www/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/index.html" afterPath="$PROJECT_DIR$/www/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,77 +459,64 @@
         <entry file="file://$PROJECT_DIR$/www/controllers/animation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="11" />
+              <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="move.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="move.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/controllers/move.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            <state relative-caret-position="768">
+              <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swiper.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/controllers/swiper.js">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="6670">
+              <caret line="290" column="42" lean-forward="false" selection-start-line="290" selection-start-column="42" selection-end-line="290" selection-end-column="42" />
+              <folding>
+                <marker date="1579252079082" expanded="true" signature="15138:15300" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="15138:15651" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="15142:15276" ph="//..." />
+                <marker date="1579252079082" expanded="true" signature="15304:15383" ph="/** 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长 ...*/" />
+                <marker date="1579252079082" expanded="true" signature="15416:15454" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="15501:15588" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="15624:15649" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="15716:18313" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="15735:16006" ph="[...]" />
+                <marker date="1579252079082" expanded="true" signature="15736:15819" ph="{&quot;id&quot;: 'slider1'...}" />
+                <marker date="1579252079082" expanded="true" signature="15825:15909" ph="{&quot;id&quot;: 'slider2'...}" />
+                <marker date="1579252079082" expanded="true" signature="15915:16002" ph="{&quot;id&quot;: 'slider3'...}" />
+                <marker date="1579252079082" expanded="true" signature="16118:17051" ph="{&quot;direction&quot;: 'vertical'...}" />
+                <marker date="1579252079082" expanded="true" signature="16292:17047" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="16324:16730" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="16450:16554" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="16775:16967" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="16832:16933" ph="{&quot;id&quot;: 'slider4'...}" />
+                <marker date="1579252079082" expanded="true" signature="17012:17040" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="17154:17317" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="17183:17275" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="17380:17614" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="17649:18004" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="18039:18112" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="18159:18248" ph="{...}" />
+                <marker date="1579252079082" expanded="true" signature="18283:18311" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="draw.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/controllers/draw.js">
+      <file leaf-file-name="move.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/move.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drawingpad.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/controllers/drawingpad.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drawTriangles.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/controllers/drawTriangles.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/controllers/image.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1403">
-              <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/controllers/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="138">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,27 +525,39 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+            <state relative-caret-position="529">
+              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lufylegend-2.0.0.beta4.simple.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/lib/lufylegend-2.0.0.beta4.simple.js">
+      <file leaf-file-name="drawingpad.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/drawingpad.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2116">
-              <caret line="1721" column="27" lean-forward="true" selection-start-line="1721" selection-start-column="27" selection-end-line="1721" selection-end-column="27" />
-              <folding>
-                <marker date="1575533333984" expanded="true" signature="23034:23131" ph="..." />
-                <marker date="1575533333984" expanded="true" signature="23200:23256" ph="..." />
-                <marker date="1575533333984" expanded="true" signature="23577:23638" ph="..." />
-                <marker date="1575533333984" expanded="true" signature="23728:23774" ph="..." />
-                <marker date="1575533333984" expanded="true" signature="23872:23906" ph="..." />
-                <marker date="1575533333984" expanded="true" signature="23998:24032" ph="..." />
-                <marker date="1575533333984" expanded="true" signature="131947:132010" ph="..." />
-              </folding>
+            <state relative-caret-position="138">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,12 +576,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>LGlobal</find>
-      <find>_requestAF(loop, s);</find>
       <find>enter_frame</find>
       <find>_ll_onframe</find>
       <find>settimeout</find>
       <find>LGlobal.re</find>
       <find>LGlobal.requestid</find>
+      <find>_requestAF(loop, s);</find>
+      <find>49258718030841</find>
+      <find>file origin does not match viewer's</find>
+      <find>console</find>
+      <find>console.log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,18 +602,24 @@
         <option value="$PROJECT_DIR$/www/templates/animation.html" />
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/www/templates/swiper.html" />
-        <option value="$PROJECT_DIR$/www/templates/move.html" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/templates/drawingpad.html" />
         <option value="$PROJECT_DIR$/www/controllers/draw.js" />
         <option value="$PROJECT_DIR$/www/controllers/drawTriangles.js" />
-        <option value="$PROJECT_DIR$/www/controllers/swiper.js" />
-        <option value="$PROJECT_DIR$/www/templates/index.html" />
-        <option value="$PROJECT_DIR$/www/controllers/drawingpad.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/controllers/image.js" />
-        <option value="$PROJECT_DIR$/www/lib/lufylegend-2.0.0.beta4.simple.js" />
+        <option value="$PROJECT_DIR$/www/controllers/swiper.js" />
+        <option value="$PROJECT_DIR$/www/controllers/download.js" />
+        <option value="$PROJECT_DIR$/www/pdf/web/viewer.js" />
+        <option value="$PROJECT_DIR$/www/templates/download.html" />
+        <option value="$PROJECT_DIR$/www/templates/video.html" />
+        <option value="$PROJECT_DIR$/www/controllers/video.js" />
         <option value="$PROJECT_DIR$/www/controllers/animation.js" />
+        <option value="$PROJECT_DIR$/www/lib/lufylegend-2.0.0.beta4.simple.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/templates/move.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/www/controllers/drawingpad.js" />
+        <option value="$PROJECT_DIR$/www/templates/index.html" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/controllers/move.js" />
       </list>
     </option>
@@ -197,8 +641,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -215,8 +659,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,29 +681,42 @@
               <item name="lufy" type="b2602c69:ProjectViewProjectNode" />
               <item name="lufy" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lufy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lufy" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lufy" type="b2602c69:ProjectViewProjectNode" />
               <item name="lufy" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="lufylegend-2.0.0.beta4.simple.js" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="lufy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lufy" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lufydemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -295,12 +750,19 @@
       <workItem from="1573549727706" duration="4504000" />
       <workItem from="1575429630564" duration="2889000" />
       <workItem from="1575511232262" duration="5787000" />
-      <workItem from="1575535836263" duration="488000" />
+      <workItem from="1575535836263" duration="4873000" />
+      <workItem from="1578034514796" duration="5437000" />
+      <workItem from="1578452248152" duration="38123000" />
+      <workItem from="1579074851020" duration="21000" />
+      <workItem from="1579139782906" duration="14000" />
+      <workItem from="1579142877468" duration="9674000" />
+      <workItem from="1579240314063" duration="187000" />
+      <workItem from="1579241251638" duration="9533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51675000" />
+    <option name="totallyTimeSpent" value="119049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -321,7 +783,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -332,61 +794,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/drawingpad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/animation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/animation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/draw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/move.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/image.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/controllers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -455,7 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="34" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -576,20 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/move.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/draw.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -604,89 +1002,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/drawingpad.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/lufylegend-2.0.0.beta4.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-414">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/lufylegend-2.0.0.beta4.simple.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2116">
-          <caret line="1721" column="27" lean-forward="true" selection-start-line="1721" selection-start-column="27" selection-end-line="1721" selection-end-column="27" />
-          <folding>
-            <marker date="1575533333984" expanded="true" signature="23034:23131" ph="..." />
-            <marker date="1575533333984" expanded="true" signature="23200:23256" ph="..." />
-            <marker date="1575533333984" expanded="true" signature="23577:23638" ph="..." />
-            <marker date="1575533333984" expanded="true" signature="23728:23774" ph="..." />
-            <marker date="1575533333984" expanded="true" signature="23872:23906" ph="..." />
-            <marker date="1575533333984" expanded="true" signature="23998:24032" ph="..." />
-            <marker date="1575533333984" expanded="true" signature="131947:132010" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/animation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/draw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/drawingpad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/controllers/drawTriangles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="161">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/controllers/image.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="115">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -694,22 +1027,142 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/swiper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/services/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/draw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/video.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/video.js" />
+    <entry file="file://$PROJECT_DIR$/www/controllers/animation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/lib/lufylegend-2.0.0.beta4.simple.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="1700" column="32" lean-forward="true" selection-start-line="1700" selection-start-column="32" selection-end-line="1700" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/move.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pdf/web/viewer.js" />
+    <entry file="file://$PROJECT_DIR$/www/templates/download.html" />
+    <entry file="file://$PROJECT_DIR$/www/templates/drawingpad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/download.js" />
+    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6670">
+          <caret line="290" column="42" lean-forward="false" selection-start-line="290" selection-start-column="42" selection-end-line="290" selection-end-column="42" />
+          <folding>
+            <marker date="1579252079082" expanded="true" signature="15138:15300" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="15138:15651" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="15142:15276" ph="//..." />
+            <marker date="1579252079082" expanded="true" signature="15304:15383" ph="/** 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长 ...*/" />
+            <marker date="1579252079082" expanded="true" signature="15416:15454" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="15501:15588" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="15624:15649" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="15716:18313" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="15735:16006" ph="[...]" />
+            <marker date="1579252079082" expanded="true" signature="15736:15819" ph="{&quot;id&quot;: 'slider1'...}" />
+            <marker date="1579252079082" expanded="true" signature="15825:15909" ph="{&quot;id&quot;: 'slider2'...}" />
+            <marker date="1579252079082" expanded="true" signature="15915:16002" ph="{&quot;id&quot;: 'slider3'...}" />
+            <marker date="1579252079082" expanded="true" signature="16118:17051" ph="{&quot;direction&quot;: 'vertical'...}" />
+            <marker date="1579252079082" expanded="true" signature="16292:17047" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="16324:16730" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="16450:16554" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="16775:16967" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="16832:16933" ph="{&quot;id&quot;: 'slider4'...}" />
+            <marker date="1579252079082" expanded="true" signature="17012:17040" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="17154:17317" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="17183:17275" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="17380:17614" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="17649:18004" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="18039:18112" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="18159:18248" ph="{...}" />
+            <marker date="1579252079082" expanded="true" signature="18283:18311" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/drawingpad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="99" column="4" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/controllers/move.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/swiper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state relative-caret-position="768">
+          <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
           <folding />
         </state>
       </provider>

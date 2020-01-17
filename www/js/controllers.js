@@ -10,7 +10,6 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
 
   LInit(100, 'animation', w, h, main);
-  console.log(LGlobal.speed)
 
   var backgroundLayer, player, player2;
   var walkDown = true;
@@ -38,7 +37,6 @@ angular.module('starter.controllers', [])
 
   function onEnterFrame(event) {
     // console.log(LGlobal.requestIdArr)
-    console.log(LGlobal.requestId)
     player.onframe();
     if (walkDown) {
       if (player.y < h) {
@@ -89,7 +87,7 @@ angular.module('starter.controllers', [])
   var backgroundLayer;
   var i = 0;
 
-  LInit(50, 'draw', w, h, main);
+  LInit(20, 'draw', w, h, main);
 
 
   function main(event) {
@@ -173,47 +171,152 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('DrawingpadCtrl', function($scope, $state) {
-
-  var w = document.body.clientWidth;
-  var h = document.body.clientHeight;
-  var backgroundLayer;
-
-
-  LInit(1, 'drawingpad', w, h, main);
-
-
-  function main(event) {
-    initBackgroundLayer();
-    var drawing = new LSprite();
-    console.log(drawing.getWidth())
-    backgroundLayer.addChild(drawing);
-    drawing.graphics.drawRect(0,'',[0,0,w,h],true,'#fff');
-    drawing.addEventListener(LMouseEvent.MOUSE_DOWN,onMouseDown)
-  }
-
-  function onMouseDown(e) {
-    console.log(e)
-    // drawing.graphics.moveTo
-  }
-
-
-  function initBackgroundLayer() {
-    backgroundLayer = new LSprite();
-    backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
-    addChild(backgroundLayer);
-  }
-
-
-  $scope.$on('$ionicView.leave', function() {
-    backgroundLayer.removeAllChild();
-    backgroundLayer.removeAllEventListener()
-  })
-
-
-  $scope.goToIndex = function() {
-    $state.go('index')
-  }
+.
+controller('DrawingpadCtrl', function ($scope, $state) {
+	
+	var w = document.body.clientWidth;
+	var h = document.body.clientHeight;
+	var backgroundLayer, drawing;
+	var isDrawing, lastPoint;
+	var points = [];
+	var bitmap1;
+	var bitmapdata1;
+	var ctx;
+	var lineWidth = 1;
+	var touchPointIdList = []; // 触点数组
+	
+	
+	LInit(20, 'drawingpad', w, h, main);
+	
+	
+	function main(event) {
+		LMultitouch.inputMode = LMultitouchInputMode.TOUCH_POINT;
+		initBackgroundLayer();
+		bitmapdata1 = new LBitmapData(null, 0, 0, w, h, LBitmapData.DATA_CANVAS);
+		ctx = bitmapdata1._canvas.getContext('2d');
+		ctx.lineJoin = ctx.lineCap = 'round';
+		bitmap1 = new LBitmap(bitmapdata1);
+		
+		backgroundLayer.addChild(bitmap1);
+		
+		backgroundLayer.addEventListener(LMouseEvent.MOUSE_DOWN, onMouseDown);
+		backgroundLayer.addEventListener(LMouseEvent.MOUSE_MOVE, onMouseMove);
+		backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP, onMouseUp);
+	}
+	
+	
+	function onMouseDown(e) {
+		initTouchPoint(e);
+		
+		// 单指绘画
+		if (touchPointIdList.length == 1) {
+			isDrawing = true;
+			ctx.lineWidth = lineWidth;
+			points.push({x: e.selfX, y: e.selfY});
+		} else if (touchPointIdList.length == 2) {
+			// 双指移动缩放
+			
+		}
+		
+	}
+	
+	function onMouseMove(e) {
+		// 更新触点坐标
+		initTouchPoint(e);
+		if (touchPointIdList.length == 1) {
+			// 绘画
+			
+			if (!isDrawing) return;
+			points.push({x: e.selfX, y: e.selfY});
+			ctx.clearRect(0, 0, w, h);
+			
+			var p1 = points[0];
+			var p2 = points[1];
+			
+			ctx.beginPath();
+			ctx.moveTo(p1.x, p1.y);
+			
+			for (var i = 0; i < points.length; i++) {
+				var midPoint = midPointBtw(p1, p2);
+				ctx.quadraticCurveTo(p1.x, p1.y, midPoint.x, midPoint.y);
+				p1 = points[i];
+				p2 = points[i + 1];
+			}
+			ctx.lineTo(p1.x, p1.y);
+			ctx.stroke();
+		} else if (touchPointIdList.length == 2) {
+			// 移动
+			backgroundLayer.stopDrag();
+			backgroundLayer.startDrag(touchPointIdList[1].touchPointID)
+		}
+		
+	}
+	
+	
+	function onMouseUp(e) {
+		
+		if(touchPointIdList.length == 1){
+			// 单触点绘画
+			isDrawing = false;
+			points.length = 0;
+		}
+		// 手指up，数组清空
+		for (var i = 0; i < touchPointIdList.length; i++) {
+			if (touchPointIdList[i].touchPointID == e.touchPointID) {
+				touchPointIdList.splice(i, 1);
+				break;
+			}
+		}
+		console.log(touchPointIdList.length)
+		// ctx.clearRect(0,0,w,h)
+	}
+	
+	function distanceBetween(point1, point2) {
+		return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+	}
+	
+	function angleBetween(point1, point2) {
+		return Math.atan2(point2.x - point1.x, point2.y - point1.y);
+	}
+	
+	function midPointBtw(p1, p2) {
+		return {
+			x: p1.x + (p2.x - p1.x) / 2,
+			y: p1.y + (p2.y - p1.y) / 2
+		};
+	}
+	
+	function initTouchPoint(e) {
+		var flag = false;
+		for (var i = 0; i < touchPointIdList.length; i++) {
+			if (touchPointIdList[i].touchPointID == e.touchPointID) {
+				touchPointIdList[i] = e;
+				flag = true;
+				break;
+			}
+		}
+		if (!flag) {
+			touchPointIdList.push(e);
+		}
+	}
+	
+	
+	function initBackgroundLayer() {
+		backgroundLayer = new LSprite();
+		backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
+		addChild(backgroundLayer);
+	}
+	
+	
+	$scope.$on('$ionicView.leave', function () {
+		backgroundLayer.removeAllChild();
+		backgroundLayer.removeAllEventListener()
+	})
+	
+	
+	$scope.goToIndex = function () {
+		$state.go('index')
+	}
 })
 
 .controller('DrawTrianglesCtrl', function($scope, $state) {
@@ -223,7 +326,7 @@ angular.module('starter.controllers', [])
   var loader;
   var backgroundLayer;
 
-  LInit(50, 'drawTriangles', w, h, main);
+  LInit(20, 'drawTriangles', w, h, main);
 
 
   function main(event) {
@@ -306,7 +409,7 @@ angular.module('starter.controllers', [])
   var h = document.body.clientHeight;
   var loader, backgroundLayer, layer;
 
-  LInit(50, 'image', w, h, main);
+  LInit(20, 'image', w, h, main);
 
   function main(event) {
     initBackgroundLayer();
@@ -369,80 +472,189 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('MoveCtrl', function($scope, $state) {
-  var w = document.body.clientWidth;
-  var h = document.body.clientHeight;
-  var loader, backgroundLayer, layer, tempLocation;
+.
+controller('MoveCtrl', function ($scope, $state) {
+	var w = document.body.clientWidth;
+	var h = document.body.clientHeight;
+	var loader, backgroundLayer, layer, tempLocation;
+	var touchPointIdList = [];
+	var lenOld;
+	var lastScale,lastRotate;
+	var midPoint;
+	var bitmap;
+	// 初始的角度
+	var startAngle;
+	
+	LInit(requestAnimationFrame, 'move', w, h, main);
+	
+	function main(event) {
+		LMultitouch.inputMode = LMultitouchInputMode.TOUCH_POINT;
+		initBackgroundLayer();
+		loader = new LLoader();
+		loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
+		loader.load('img/adam.jpg', 'bitmapData');
+		
+		
+	}
+	
+	
+	function initBackgroundLayer() {
+		backgroundLayer = new LSprite();
+		backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
+		addChild(backgroundLayer);
+		
+		// mouse_down
+		backgroundLayer.addEventListener(LMouseEvent.MOUSE_DOWN, function (event) {
+			lastScale = layer.scaleX;
+			lastRotate = layer.rotate;
+			var flag = false;
+			for (var i = 0; i < touchPointIdList.length; i++) {
+				if (touchPointIdList[i].touchPointID == event.touchPointID) {
+					flag = true;
+					break;
+				}
+			}
+			if (!flag) {
+				touchPointIdList.push(event);
+			}
+			
+			// 第二个点的坐标
+			if (touchPointIdList.length == 2) {
+				var point1 = new LPoint(touchPointIdList[0].selfX,touchPointIdList[0].selfY);
+				var point2 = new LPoint(touchPointIdList[1].selfX,touchPointIdList[1].selfY);
+				
+				lenOld = distanceBetween(point1, point2);
+				
+				startAngle = angleBetween(point1,point2);
+			
+				// var tempMatrix = new LMatrix();
+				// tempMatrix.translate(-midPoint.x,-midPoint.y);
+				// layer.transform.matrix = tempMatrix;
+				// console.log(layer)
+			}else if(touchPointIdList.length == 3){
+				// 三指恢复原始状态
+				layer.x = bitmap.getWidth()/2;
+				layer.y = bitmap.getHeight()/2;
+				layer.scaleX = layer.scaleY = 1;
+				layer.rotate = 0;
+			}
+		});
+		
+		// mouse_move
+		backgroundLayer.addEventListener(LMouseEvent.MOUSE_MOVE, function (event) {
+			
+			// 只有两个触点才移动
+			if (touchPointIdList.length == 2) {
+				var flag = false;
+				for (var i = 0; i < touchPointIdList.length; i++) {
+					if (touchPointIdList[i].touchPointID == event.touchPointID) {
+						touchPointIdList[i] = event;
+						flag = true;
+						break;
+					}
+				}
+				var point1 = new LPoint(touchPointIdList[0].selfX,touchPointIdList[0].selfY);
+				var point2 = new LPoint(touchPointIdList[1].selfX,touchPointIdList[1].selfY);
+				
+				if (event.touchPointID == touchPointIdList[1].touchPointID) {
+					
+					// 移动
+					layer.stopDrag();
+					layer.startDrag(touchPointIdList[1].touchPointID);
+					midPoint = midPointBtw(point1,point2);
 
-  LInit(1, 'move', w, h, main);
+					// 缩放
+					var lenNew = distanceBetween(point1, point2);
+					var scale = (lenNew - lenOld) / lenOld;
+					// 最小是原大小
+					layer.scaleX = lastScale + scale;
+					layer.scaleY = lastScale + scale;
+					// 旋转
+					// 计算旋转角度
+					var angle = angleBetween(point1,point2);
+					var angleChange = (angle - startAngle)*180;
+					console.log(angleChange)
+					if(Math.abs(angleChange)<10){
+						layer.rotate -= angleChange;
+					}
+					startAngle = angle;
 
-  function main(event) {
-    initBackgroundLayer();
-    loader = new LLoader();
-    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
-    loader.load('img/adam.jpg', 'bitmapData');
+				}
+			}
+		})
+		backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP, function (e) {
+			for (var i = 0; i < touchPointIdList.length; i++) {
+				if (touchPointIdList[i].touchPointID == e.touchPointID) {
+					touchPointIdList.splice(i, 1);
+					break;
+				}
+			}
+		})
+	}
+	
+	function distanceBetween(point1, point2) {
+		return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+	}
+	
+	function angleBetween(point1, point2) {
+		return Math.atan2(point2.x - point1.x, point2.y - point1.y);
+	}
+	
+	function midPointBtw(p1, p2) {
+		return {
+			x: p1.x + (p2.x - p1.x) / 2,
+			y: p1.y + (p2.y - p1.y) / 2
+		};
+	}
+	
+	function loadBitmapdata(event) {
+		var bitmapdata = new LBitmapData(loader.content);
+		bitmap = new LBitmap(bitmapdata);
+		
+		layer = new LSprite();
+		backgroundLayer.addChild(layer);
+		layer.addChild(bitmap);
 
+		bitmap.scaleX = w / bitmap.width;
+		bitmap.scaleY = w / bitmap.width;
 
-  }
-
-
-  function initBackgroundLayer() {
-    backgroundLayer = new LSprite();
-    backgroundLayer.graphics.drawRect(0, '', [0, 0, w, h], true, '#fff');
-    addChild(backgroundLayer);
-    backgroundLayer.addEventListener(LMouseEvent.MOUSE_DOWN, function(event) {
-      tempLocation = {
-        x: event.offsetX,
-        y: event.offsetY
-      };
-    })
-    backgroundLayer.addEventListener(LMouseEvent.MOUSE_MOVE, function(event) {
-      var tempx = event.offsetX - tempLocation.x;
-      var tempy = event.offsetY - tempLocation.y;
-      layer.x += tempx;
-      layer.y += tempy;
-      tempLocation = {
-        x: event.offsetX,
-        y: event.offsetY
-      };
-    })
-    backgroundLayer.addEventListener(LMouseEvent.MOUSE_UP, function(event) {
-
-    })
-  }
-
-  function loadBitmapdata(event) {
-    var bitmapdata = new LBitmapData(loader.content);
-    var bitmap = new LBitmap(bitmapdata);
-
-    layer = new LSprite();
-    backgroundLayer.addChild(layer);
-    layer.addChild(bitmap);
-
-    bitmap.scaleX = w / bitmap.width;
-    bitmap.scaleY = w / bitmap.width;
-    layer.x = 50;
-    layer.y = 100;
-    // layer.rotate = 20;
-    layer.alpha = 0.4;
-  }
-
-  /**
-   * 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长
-   */
-  $scope.hideImage = function() {
-    layer.visible = !layer.visible;
-  }
-
-  $scope.$on('$ionicView.leave', function() {
-    backgroundLayer.removeAllChild();
-    backgroundLayer.removeAllEventListener();
-
-  })
-
-  $scope.goToIndex = function() {
-    $state.go('index')
-  }
+		layer.x = bitmap.getWidth()/2;
+		layer.y = bitmap.getHeight()/2;
+		
+		bitmap.x = -bitmap.getWidth()/2;
+		bitmap.y = -bitmap.getHeight()/2;
+		// bitmap.x = -w/2;
+		// bitmap.y = -w/2;
+		
+		// layer.x = w+w/2;
+		// layer.y = w+w/2;
+		// 控制是否绕着中心旋转，默认是true，绕着中心旋转，false是绕着
+		// bitmap.rotateCenter = false;
+		// bitmap.x += w/2;
+		// bitmap.y += w/2;
+		// layer.rotate = 45;
+		// bitmap.rotate = 45;
+		// bitmap.x += w/2;
+		// bitmap.y += w/2;
+		layer.alpha = 0.4;
+	}
+	
+	/**
+	 * 可以使用div控制canvas中的对象，div是在canvas之上显示的，这样布局就方便多了，可以充分发挥canvas和css的特长
+	 */
+	$scope.hideImage = function () {
+		layer.visible = !layer.visible;
+	}
+	
+	$scope.$on('$ionicView.leave', function () {
+		backgroundLayer.removeAllChild();
+		backgroundLayer.removeAllEventListener();
+		
+	})
+	
+	$scope.goToIndex = function () {
+		$state.go('index')
+	}
 })
 
 .
@@ -480,7 +692,7 @@ controller('SwiperCtrl', function($scope, $state, $timeout) {
           // 切换页面，动画会越来越快，应该是在切换页面后，之前的计时器没有清除导致的
           clearInterval(LGlobal.frameRate)
         }
-        LInit(50, $scope.list[this.activeIndex].id, w, h, main);
+        LInit(20, $scope.list[this.activeIndex].id, w, h, main);
         color = $scope.list[this.activeIndex].color;
         img = $scope.list[this.activeIndex].img;
 

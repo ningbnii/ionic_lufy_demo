@@ -5,9 +5,11 @@ controller('MoveCtrl', function ($scope, $state) {
 	var loader, backgroundLayer, layer, tempLocation;
 	var touchPointIdList = [];
 	var lenOld;
-	var lastScale;
+	var lastScale,lastRotate;
 	var midPoint;
 	var bitmap;
+	// 初始的角度
+	var startAngle;
 	
 	LInit(requestAnimationFrame, 'move', w, h, main);
 	
@@ -29,7 +31,8 @@ controller('MoveCtrl', function ($scope, $state) {
 		
 		// mouse_down
 		backgroundLayer.addEventListener(LMouseEvent.MOUSE_DOWN, function (event) {
-			lastScale = bitmap.scaleX;
+			lastScale = layer.scaleX;
+			lastRotate = layer.rotate;
 			var flag = false;
 			for (var i = 0; i < touchPointIdList.length; i++) {
 				if (touchPointIdList[i].touchPointID == event.touchPointID) {
@@ -43,21 +46,23 @@ controller('MoveCtrl', function ($scope, $state) {
 			
 			// 第二个点的坐标
 			if (touchPointIdList.length == 2) {
+				var point1 = new LPoint(touchPointIdList[0].selfX,touchPointIdList[0].selfY);
+				var point2 = new LPoint(touchPointIdList[1].selfX,touchPointIdList[1].selfY);
 				
-				lenOld = distanceBetween({
-					x: touchPointIdList[0].selfX,
-					y: touchPointIdList[0].selfY
-				}, {x: touchPointIdList[1].selfX, y: touchPointIdList[1].selfY});
+				lenOld = distanceBetween(point1, point2);
 				
-				
+				startAngle = angleBetween(point1,point2);
+			
 				// var tempMatrix = new LMatrix();
 				// tempMatrix.translate(-midPoint.x,-midPoint.y);
 				// layer.transform.matrix = tempMatrix;
 				// console.log(layer)
 			}else if(touchPointIdList.length == 3){
 				// 三指恢复原始状态
-				bitmap.scaleX = bitmap.scaleY = 1;
-				bitmap.rotate = 0;
+				layer.x = bitmap.getWidth()/2;
+				layer.y = bitmap.getHeight()/2;
+				layer.scaleX = layer.scaleY = 1;
+				layer.rotate = 0;
 			}
 		});
 		
@@ -82,20 +87,24 @@ controller('MoveCtrl', function ($scope, $state) {
 					// 移动
 					layer.stopDrag();
 					layer.startDrag(touchPointIdList[1].touchPointID);
-					
+					midPoint = midPointBtw(point1,point2);
+
 					// 缩放
 					var lenNew = distanceBetween(point1, point2);
 					var scale = (lenNew - lenOld) / lenOld;
 					// 最小是原大小
-					if (lastScale + scale > 1 && (scale > 0.1 || scale < -0.1)) {
-						
-						bitmap.scaleX = lastScale + scale;
-						bitmap.scaleY = lastScale + scale;
-					}
+					layer.scaleX = lastScale + scale;
+					layer.scaleY = lastScale + scale;
 					// 旋转
 					// 计算旋转角度
-					var angle1 = angleBetween()
-					bitmap.rotate += 0.1;
+					var angle = angleBetween(point1,point2);
+					var angleChange = (angle - startAngle)*180;
+					console.log(angleChange)
+					if(Math.abs(angleChange)<10){
+						layer.rotate -= angleChange;
+					}
+					startAngle = angle;
+
 				}
 			}
 		})
@@ -132,10 +141,21 @@ controller('MoveCtrl', function ($scope, $state) {
 		backgroundLayer.addChild(layer);
 		layer.addChild(bitmap);
 
-		// bitmap.scaleX = w / bitmap.width;
-		// bitmap.scaleY = w / bitmap.width;
-		bitmap.x = 200;
-		bitmap.y = 200;
+		bitmap.scaleX = w / bitmap.width;
+		bitmap.scaleY = w / bitmap.width;
+
+		layer.x = bitmap.getWidth()/2;
+		layer.y = bitmap.getHeight()/2;
+		
+		bitmap.x = -bitmap.getWidth()/2;
+		bitmap.y = -bitmap.getHeight()/2;
+		// bitmap.x = -w/2;
+		// bitmap.y = -w/2;
+		
+		// layer.x = w+w/2;
+		// layer.y = w+w/2;
+		// 控制是否绕着中心旋转，默认是true，绕着中心旋转，false是绕着
+		// bitmap.rotateCenter = false;
 		// bitmap.x += w/2;
 		// bitmap.y += w/2;
 		// layer.rotate = 45;
